@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuclear Power Simulator Wireframe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="wireframe.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <div class="logo-circle">NP</div>
+      <div>
+        <p class="eyebrow">Dashboard</p>
+        <h1>Nuclear Power Simulator</h1>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="btn ghost">View Logs</button>
+      <button class="btn solid">Reset Plant</button>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="panel plant-id">
+      <div class="panel-header">
+        <h2>Plant Identity</h2>
+        <span class="chip">Global</span>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>Plant Name</label>
+          <div class="input-placeholder">"Aurora Station"</div>
+        </div>
+        <div class="field">
+          <label>Global Reactor Control</label>
+          <div class="control-row">
+            <button class="btn solid">Controlled Shutdown</button>
+            <button class="btn solid danger">Emergency Shutdown</button>
+            <button class="btn solid accent">Enable Coolant</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="overview-grid">
+      <article class="card stat">
+        <p class="eyebrow">Average Temp</p>
+        <h3>542°C</h3>
+        <p class="subtext">Global 5 min trend</p>
+      </article>
+      <article class="card stat">
+        <p class="eyebrow">Total Output</p>
+        <h3>3.4 GW</h3>
+        <p class="subtext">Across all reactors</p>
+      </article>
+      <article class="card stat">
+        <p class="eyebrow">Coolant</p>
+        <h3>Online</h3>
+        <p class="subtext">Auto-failover enabled</p>
+      </article>
+      <article class="card stat">
+        <p class="eyebrow">Rod Position</p>
+        <h3>12 raised / 4 lowered</h3>
+        <p class="subtext">Across fleet</p>
+      </article>
+    </section>
+
+    <section class="charts-row">
+      <article class="panel chart">
+        <div class="panel-header">
+          <h2>Global Temperature (5 min)</h2>
+          <span class="chip">Polling 5s</span>
+        </div>
+        <div class="chart-placeholder">Line chart area</div>
+      </article>
+      <article class="panel chart logs">
+        <div class="panel-header">
+          <h2>System Logs</h2>
+          <span class="chip outline">Snackbar feed</span>
+        </div>
+        <ul class="log-list">
+          <li>12:01 Reactor 3 coolant enabled</li>
+          <li>12:00 Reactor 1 emergency shutdown</li>
+          <li>11:59 Average temp trending down</li>
+          <li>11:58 Reactor 2 rods raised to 60%</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="panel reactors">
+      <div class="panel-header">
+        <h2>Reactors</h2>
+        <div class="header-actions">
+          <button class="btn solid">Controlled Shutdown (All)</button>
+          <button class="btn solid danger">Emergency Shutdown (All)</button>
+          <button class="btn solid accent">Coolant Toggle (All)</button>
+        </div>
+      </div>
+      <div class="reactor-grid">
+        <article class="card reactor">
+          <div class="reactor-header">
+            <div>
+              <p class="eyebrow">Reactor</p>
+              <h3>R-01 "Solstice"</h3>
+            </div>
+            <span class="status online">Online</span>
+          </div>
+          <div class="reactor-metrics">
+            <div>
+              <p class="eyebrow">Output</p>
+              <strong>850 MW</strong>
+            </div>
+            <div>
+              <p class="eyebrow">Temp</p>
+              <strong>530°C</strong>
+              <p class="subtext safe">Safe</p>
+            </div>
+            <div>
+              <p class="eyebrow">Coolant</p>
+              <strong>On</strong>
+            </div>
+            <div>
+              <p class="eyebrow">Rods</p>
+              <strong>6 up / 2 down</strong>
+            </div>
+          </div>
+          <div class="chart-placeholder mini">Reactor temp (5 min)</div>
+          <div class="control-row wrap">
+            <button class="btn ghost">View Details</button>
+            <button class="btn solid">Controlled Shutdown</button>
+            <button class="btn solid danger">Emergency Shutdown</button>
+            <button class="btn solid accent">Toggle Coolant</button>
+            <button class="btn ghost">Raise Rods</button>
+            <button class="btn ghost">Lower Rods</button>
+            <button class="btn ghost">Refuel</button>
+          </div>
+        </article>
+
+        <article class="card reactor muted">
+          <div class="reactor-header">
+            <div>
+              <p class="eyebrow">Reactor</p>
+              <h3>R-02 "Zenith"</h3>
+            </div>
+            <span class="status refuel">Offline for refuel</span>
+          </div>
+          <div class="reactor-metrics">
+            <div>
+              <p class="eyebrow">Output</p>
+              <strong>—</strong>
+            </div>
+            <div>
+              <p class="eyebrow">Temp</p>
+              <strong>420°C</strong>
+              <p class="subtext warning">Warning</p>
+            </div>
+            <div>
+              <p class="eyebrow">Coolant</p>
+              <strong>Off</strong>
+            </div>
+            <div>
+              <p class="eyebrow">Rods</p>
+              <strong>All lowered</strong>
+            </div>
+          </div>
+          <div class="chart-placeholder mini">Reactor temp (5 min)</div>
+          <div class="control-row wrap">
+            <button class="btn ghost">View Details</button>
+            <button class="btn solid">Restart</button>
+            <button class="btn solid accent">Enable Coolant</button>
+            <button class="btn ghost">Refuel</button>
+          </div>
+        </article>
+
+        <article class="card reactor">
+          <div class="reactor-header">
+            <div>
+              <p class="eyebrow">Reactor</p>
+              <h3>R-03 "Horizon"</h3>
+            </div>
+            <span class="status offline">Emergency Shutdown</span>
+          </div>
+          <div class="reactor-metrics">
+            <div>
+              <p class="eyebrow">Output</p>
+              <strong>0 MW</strong>
+            </div>
+            <div>
+              <p class="eyebrow">Temp</p>
+              <strong>780°C</strong>
+              <p class="subtext danger">Danger</p>
+            </div>
+            <div>
+              <p class="eyebrow">Coolant</p>
+              <strong>On</strong>
+            </div>
+            <div>
+              <p class="eyebrow">Rods</p>
+              <strong>5 up / 3 down</strong>
+            </div>
+          </div>
+          <div class="chart-placeholder mini">Reactor temp (5 min)</div>
+          <div class="control-row wrap">
+            <button class="btn ghost">View Details</button>
+            <button class="btn solid">Controlled Restart</button>
+            <button class="btn solid accent">Toggle Coolant</button>
+            <button class="btn ghost">Raise Rods</button>
+            <button class="btn ghost">Lower Rods</button>
+            <button class="btn ghost">Refuel</button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
