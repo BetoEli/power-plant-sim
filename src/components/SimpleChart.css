@@ -1,0 +1,17 @@
+.simple-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 60px;
+  gap: 2px;
+  padding: 10px;
+  background-color: #0b3954;
+  border-radius: 4px;
+}
+
+.chart-bar {
+  flex: 1;
+  min-height: 2px;
+  border-radius: 2px;
+  transition: height 0.3s ease;
+}

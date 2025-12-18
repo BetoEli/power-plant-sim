@@ -1,0 +1,176 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.modal-content {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  max-width: 1000px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background-color: #0b3954;
+  border-radius: 8px 8px 0 0;
+}
+
+.modal-header .reactor-name {
+  margin: 0;
+  color: #e0ff4f;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.modal-header .reactor-name:hover {
+  background-color: rgba(191, 215, 234, 0.1);
+}
+
+.modal-header .reactor-name-input {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  background-color: rgba(191, 215, 234, 0.1);
+  border: 2px solid #e0ff4f;
+  color: #e0ff4f;
+  border-radius: 4px;
+  font-weight: bold;
+  width: 100%;
+  max-width: 400px;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: #bfd7ea;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.close-button:hover {
+  background-color: rgba(255, 102, 99, 0.2);
+  color: #ff6663;
+}
+
+.modal-body {
+  padding: 1.5rem;
+  color: #fefffe;
+}
+
+.details-section {
+  margin-bottom: 2rem;
+}
+
+.details-section h3 {
+  color: #bfd7ea;
+  margin-bottom: 1rem;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.detail-card {
+  background-color: #0b3954;
+  padding: 1rem;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.detail-label {
+  color: #bfd7ea;
+  font-size: 0.9rem;
+}
+
+.detail-value {
+  color: #e0ff4f;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.controls-section h3 {
+  color: #bfd7ea;
+  margin-bottom: 1rem;
+}
+
+.controls-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.logs-section {
+  margin-top: 2rem;
+}
+
+.logs-section h3 {
+  color: #bfd7ea;
+  margin-bottom: 1rem;
+}
+
+.logs-section .logs-list {
+  background-color: #0b3954;
+  border-radius: 4px;
+  padding: 1rem;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.logs-section .no-logs {
+  color: #bfd7ea;
+  text-align: center;
+  padding: 2rem;
+}
+
+.logs-section .log-entry {
+  display: flex;
+  gap: 1rem;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  background-color: rgba(191, 215, 234, 0.1);
+  border-radius: 4px;
+  font-family: "Courier New", monospace;
+  font-size: 0.85rem;
+}
+
+.logs-section .log-time {
+  color: #e0ff4f;
+  font-weight: bold;
+  min-width: 150px;
+  flex-shrink: 0;
+}
+
+.logs-section .log-message {
+  color: #fefffe;
+  flex: 1;
+}

@@ -1,0 +1,44 @@
+.logs-page {
+  color: #fefffe;
+}
+
+.logs-page h1 {
+  margin: 0 0 2rem 0;
+  color: #e0ff4f;
+}
+
+.logs-container {
+  background-color: #0b3954;
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.no-logs {
+  color: #bfd7ea;
+  text-align: center;
+  padding: 2rem;
+}
+
+.log-entry {
+  display: flex;
+  gap: 1rem;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  background-color: rgba(191, 215, 234, 0.1);
+  border-radius: 4px;
+  font-family: "Courier New", monospace;
+  font-size: 0.9rem;
+}
+
+.log-time {
+  color: #e0ff4f;
+  font-weight: bold;
+  min-width: 100px;
+}
+
+.log-message {
+  color: #fefffe;
+  flex: 1;
+}

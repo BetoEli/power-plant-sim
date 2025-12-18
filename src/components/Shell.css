@@ -1,0 +1,11 @@
+.shell {
+  min-height: 100vh;
+  background-color: #1a1a1a;
+  color: #fefffe;
+}
+
+.shell-content {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
