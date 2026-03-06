@@ -78,7 +78,6 @@ Note: React 19, Vite, and TypeScript come with the default Vite React template.
 
 All data consumed from: `https://nuclear.dacoder.io/`
 
-- API Key: `643dbd98e1b2adde` (query parameter)
 - All endpoints from `/api` documentation are implemented
 - Polling intervals: 3-5 seconds for real-time updates
 
